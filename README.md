@@ -20,9 +20,7 @@ Sign a CSR
 _Note: If the certificate is going to be used for user authentication, use the usr_cert extension_
 
 ```
-$ openssl ca -extensions server_cert -days 375 -notext -md sha256 \
--in client.csr.pem \
--out client.cert.pem
+$ openssl ca -extensions server_cert -days 375 -notext -md sha256 -in client.csr.pem -out client.cert.pem
 $ chmod 444 intermediate/certs/www.example.com.cert.pem
 ```
 
