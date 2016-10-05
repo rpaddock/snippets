@@ -2,7 +2,7 @@
 
 ## OpenSSL
 
-Generate SSH key
+Generate SSH key  
 _Note: You may want to omit the -aes256 option to create a key without a password_
 
 ```
@@ -16,7 +16,7 @@ Generate CSR
 $ openssl req -key client.key.pem -new -sha256 -out client.csr.pem
 ```
 
-Sign a CSR
+Sign a CSR  
 _Note: If the certificate is going to be used for user authentication, use the usr_cert extension_
 
 ```
