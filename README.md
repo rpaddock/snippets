@@ -21,7 +21,7 @@ _Note: If the certificate is going to be used for user authentication, use the u
 
 ```
 $ openssl ca -extensions server_cert -days 375 -notext -md sha256 -in client.csr.pem -out client.cert.pem
-$ chmod 444 intermediate/certs/www.example.com.cert.pem
+$ chmod 444 client.cert.pem
 ```
 
 Verify a certificate has a valid chain of trust
