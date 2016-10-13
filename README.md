@@ -35,9 +35,6 @@ openssl verify -CAfile ca-chain.cert.pem client.cert.pem
 SSL Options
 
 ```
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-
-
 ssl_certificate           /etc/nginx/cert.crt;
 ssl_certificate_key       /etc/nginx/cert.key;
 
