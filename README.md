@@ -44,3 +44,18 @@ ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;
 ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH';
 ssl_prefer_server_ciphers on;
 ```
+
+
+## docker
+
+Move an image from one host to another
+
+```
+sudo docker save <image> | bzip2 | ssh <user>@<host> 'bunzip2 | sudo docker load'
+```
+
+With progress meter
+
+```
+sudo docker save <image> | bzip2 | pv | ssh <user>@<host> 'bunzip2 | sudo docker load'
+```
