@@ -1,5 +1,13 @@
 # snippets
 
+## MySQL
+
+Grant all privileges and set password for new user
+
+```
+GRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%' IDENTIFIED BY 'password';
+```
+
 ## OpenSSL
 
 Generate SSH key  
