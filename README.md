@@ -67,3 +67,17 @@ With progress meter
 ```
 sudo docker save <image> | bzip2 | pv | ssh <user>@<host> 'bunzip2 | sudo docker load'
 ```
+
+## aws
+
+Format EBS volume
+
+```
+sudo mkfs -t ext4 device_name
+sudo mkdir mount_point
+sudo mount device_name mount_point
+sudo cp /etc/fstab /etc/fstab.orig
+
+# add the following to /etc/fstab with replacements
+UUID=de9a1ccd-a2dd-44f1-8be8-0123456abcdef       /data   ext4    defaults,nofail        0       2
+```
