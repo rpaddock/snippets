@@ -73,9 +73,11 @@ sudo docker save <image> | bzip2 | pv | ssh <user>@<host> 'bunzip2 | sudo docker
 Format EBS volume
 
 ```
-sudo mkfs -t ext4 device_name
-sudo mkdir mount_point
-sudo mount device_name mount_point
+# assuming device is /dev/xvdf and mount point is /data
+sudo mkfs -t ext4 /dev/xvdf
+sudo mkdir /data
+sudo mount /dev/xvdf /data
+sudo file -s /dev/xvdf
 sudo cp /etc/fstab /etc/fstab.orig
 
 # add the following to /etc/fstab with replacements
